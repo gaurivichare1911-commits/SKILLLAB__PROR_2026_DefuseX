@@ -315,13 +315,40 @@ Add a sketch with labels showing:
 ## 8.2 Wiring Plan
 
 Describe the main electrical connections.
-
-**Response:**  
-`The ESP32 is connected to the motor driver (L298N) using four GPIO pins (18,19; 22,23) to control motor direction (IN1, IN2, IN3, IN4). Two PWM-capable pins (ENA and ENB; 25 and 26) are connected to control the speed of each motor.
-
-The motors are connected to the output terminals of the motor driver. The motor driver is powered directly by the battery pack (higher voltage), while the ESP32 receives regulated 5V from the buck converter.
-
-All components share a common ground to ensure stable operation. The projector and camera are connected to the laptop, which handles tracking and game logic separately.`
+Main Electrical Connections / Wiring Plan
+The circuit is centered around the Shrike Lite controller board, which is used to control all input and output components of the project. All devices are connected to this main board.
+1. 4x4 Matrix Keypad Connections
+   The 4x4 matrix keypad is connected to the digital input/output pins of the Shrike Lite board. The keypad has 8 terminals:
+   Rows: R1, R2, R3, R4
+   Columns: C1, C2, C3, C4
+   These row and column lines are connected to the controller pins so that the system can detect which key is pressed.
+2. I2C LCD Display Connections
+The I2C LCD display is connected using four pins:
+   VCC → Connected to 5V supply
+   GND → Connected to Ground
+   SDA → Connected to I/O pin 6
+   SCL → Connected to I/O pin 7
+   This display is used to show messages, questions, and game status.
+3. Buzzer Connection
+   The buzzer is connected between:
+   Positive terminal → Digital pin 10
+   Negative terminal → Ground
+   The buzzer gives sound alerts for wrong answers, warnings, or game over indication.
+4. LED Connections
+   Three LEDs are connected as output indicators through 220Ω resistors for current protection.
+   LED 1 → Pin 5
+   LED 2 → Pin 8
+   LED 3 → Pin 9
+   The negative terminals of all LEDs are connected to Ground.
+5. Push Button Connections
+   Three push buttons are connected to pins:
+   Button 1 → Pin 15
+   Button 2 → Pin 14
+   Button 3 → Pin 11
+   The other side of each button is connected to Ground. These buttons may be used for start, reset, or mode selection.
+6. Power Connections
+   5V supply is given to the display and required modules.
+   Ground is common for all components to complete the circuit.
 
 ## 8.3 Circuit Diagram
 
@@ -336,10 +363,10 @@ Insert a hand-drawn or software-made circuit diagram.
 
 | Question         | Response                                                                                                                                          |
 | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Power source     | `Battery (Li-ion pack)`                                                                                                                           |
-| Voltage required | `~6–8.4V for motors (via driver), stepped down to 5V for ESP32 (buck converter)`                                                                  |
-| Current concerns | `Motors can draw high current under load, which may cause voltage drops affecting ESP32 and WiFi stability`                                       |
-| Safety concerns  | `Avoid over-discharging Li-ion batteries, ensure proper voltage regulation, prevent short circuits, and secure wiring to avoid loose connections` |
+| Power source     | Laptop USB power  (5V)                                                                                                                         |
+| Voltage required | 5V USB supply for Shrike Lite board and connected components                                                                |
+| Current concerns | USB power has limited current output. If multiple components such as LCD, buzzer, LEDs, and 7-segment display operate together, voltage drop or unstable performance may occur. Excessive current draw can also reset the controller board.                                 |
+| Safety concerns  | Ensure correct wiring before powering the circuit, avoid loose connections, use resistors with LEDs, prevent short circuits, and do not overload the USB port. Keep the circuit dry and handle components carefully during testing. |
 
 ---
 
@@ -350,9 +377,8 @@ Insert a hand-drawn or software-made circuit diagram.
 | Tool / Platform                | Purpose                                        |
 | ------------------------------ | ---------------------------------------------- |
 | `Arduino ide`                |     write and upload code for project                    |
-| `[Python/PyGame/OpenCV]`       | `Track markers, game logic, create projection` |
-| `[Fusion/Blender/Illustrator]` | `[Prototyping structure]`                      |
-|                                |                                                |
+
+
 
 ## 10.2 Software Logic
 
@@ -368,24 +394,15 @@ Include:
 - communication logic,
 - reset behavior.
 
-**Response:**  
-`
+   The code starts by initializing the controller board, keypad, LCD display, 7-segment display, LEDs, buzzer, and timer. A welcome message is shown, and the system waits for the user to start the game.
+   For **input handling**, the system reads the 4x4 keypad and push buttons. The keypad is used to enter answers for Math questions and select options for Science and GK questions. Buttons can be used for start or reset functions.
+   There are no **external sensors** in this project. The keypad and buttons act as the main input devices.
+   The **decision logic** displays questions one by one, checks the user’s answers, updates the score, and controls the timer. Correct answers move to the next question, while wrong answers activate warning signals.
+   For **output behavior**, the LCD shows questions, score, and results. The 7-segment display shows the countdown timer. LEDs indicate status, and the buzzer gives warning or game over sounds.
+   There is no external **communication** such as Wi-Fi or Bluetooth. The system works completely through connected hardware components.
+   For **reset behavior**, when the game ends or reset is pressed, the score and timer return to default values, and the system goes back to the start screen.
 
-- **Startup behavior:**  
-  The ESP32 initializes motor pins, PWM control, and starts a WiFi access point with a web server. The laptop initializes camera input, tracking system, and projection mapping.
-- **Input handling:**  
-  Movement commands are received from the laptop (pygame sends http requests)
-- **Sensor reading:**  
-  The camera continuously captures frames, and OpenCV detects ArUco markers to determine the car’s position and orientation.
-- **Decision logic:**  
-  The system maps the car’s position into a virtual coordinate system and checks for nearby obstacles or collisions. If movement is valid, the command is allowed; if not, it is blocked or replaced with a feedback action (like a slight shake).
-- **Output behavior:**  
-  The ESP32 drives the motors using PWM signals to control speed and direction. The projector displays the updated game environment, including obstacles, targets, and feedback visuals.
-- **Communication logic:**  
-  The laptop sends HTTP requests (e.g., `/forward`, `/left`) to the ESP32 over WiFi. The ESP32 parses these commands and executes motor actions.
-- **Reset behavior:**  
-  If no command is received within a short timeout, the ESP32 stops the motors. The game resets when a level is completed or restarted.`
-
+-
 ## 10.3 Code Flowchart
 
 Insert a flowchart showing your code logic.
@@ -414,11 +431,11 @@ Suggested sequence:
 
 | Item                             | Quantity | In Kit? | Need to Buy? | Estimated Cost | Material / Spec               | Why This Choice?          |
 | -------------------------------- | --------:| ------- | ------------ | --------------:| ----------------------------- | ------------------------- |
-| `[ESP32]`                        | `1`      | `Yes`   | `No`         | `0`            | `38 Pin ESP32`                | `[To control components]` |
-| `[Motor Driver]`                 | `[1]`    | `[Yes]` | `[No]`       | `0`            | `[LN296]`                     | `[To drive both motors]`  |
-| `[DC Motors and wheel]`          | `[2]`    | `[No]`  | `[Yes]`      | `[150]`        | `[BO Motors and 6 cm wheels]` | `[high torque motors]`    |
-| `[Buck Converter]`               | `[1]`    | `[No]`  | `[Yes]`      | `[75]`         |                               |                           |
-| `[Li-ion batteries with holder]` | `[1]`    | `[No]`  | `[Yes]`      | `[200]`        |                               |                           |
+| Vicharak Shrike                  | `1`      | `Yes`   | `No`         | `0`            | 38 Pin SHRIKE LITE            | `[To control components]` |
+| Arduino io shield                | `1`      | `[Yes]`   | `[No]`     | `0`            |arduino extension board        | `[to execute code]`  |
+| 16X2 LCD display                 | `2`      | `[No]`    | `[Yes]`    | `[10]`         | Low-pin interface, displays text for options and feedback | `[better displaty of questions ]`    |
+| 4x4 Matrix keypad                | `1`      | `[No]`    | `[Yes]`     | `[75]`        | 8 pins keypad                 |  for entering numbers                         |
+| LED                              | `3`      | `[No]`    | `[Yes]`     | `[15]`        | light emiiting device         |indication                           |
 
 ## 11.2 Material Justification
 
