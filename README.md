@@ -818,7 +818,8 @@ Before submission, confirm that:
 - [x] Playtesting notes are included
 - [x] Build photos are included
 - [x] Final reflection is written
-<img width="1131" height="1600" alt="image" src="images/FLOWCHART.jpeg" />
+<img width="1131" height="1600" alt="image" src="images/FINALPRODUCT.jpeg" />
+<img width="1131" height="1600" alt="image" src="images/product.mp4" />
 
 ---
 
