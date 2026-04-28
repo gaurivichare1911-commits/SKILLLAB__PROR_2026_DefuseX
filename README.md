@@ -602,7 +602,7 @@ Suggested images:
 - mechanism test,
 - app screenshot,
 - final build.
-- <img width="960" height="1280" alt="WhatsApp Image 2026-04-24 at 9 46 02 AM (1)" src="image/MKB2" />
+- <img width="960" height="1280" alt="WhatsApp Image 2026-04-24 at 9 46 02 AM (1)" src="images/MKB2" />
 
 
 
