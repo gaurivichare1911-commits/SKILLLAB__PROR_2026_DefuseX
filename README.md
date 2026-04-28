@@ -59,6 +59,7 @@ By the final review, this README should clearly show:
 
 DefuseX
 <img width="800" height="800" alt="image" src="images/MKB1.jpeg" />
+https://youtu.be/lA20RRszkcM
 
 ## 1.2 Team Members
 
