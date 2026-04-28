@@ -441,17 +441,22 @@ Suggested sequence:
 
 Explain why you selected your main materials and components.
 
-**Response:**  
-`DC motors (BO motors) were chosen instead of servos or steppers because the system requires continuous rotation for movement rather than precise angular control (Previously, we were considering using steppers as we were planning on tracking movement on the ESP using its relative position from an origin, but since we're using a camera now, this is not required). A motor driver (L298N) was used to allow bidirectional control and speed variation using PWM.`
+  - The Vicharak Shrike Lite board was selected as the main controller because it is suitable for embedded system projects and can easily interface with multiple input and output devices. It controls the complete game logic, timer, and user interaction.
+  -The 4x4 matrix keypad was chosen because it provides a simple and efficient method for entering numerical answers and selecting options using fewer controller pins.
+  -The 16x2 LCD display was selected to show questions, instructions, score, and game messages clearly in real time. It provides an easy-to-read interface for the user.
+  -The 7-segment display was used to show the countdown timer separately, making the remaining time more visible during gameplay.
+  -LEDs were chosen as visual indicators for correct answers, warnings, and game status because they are simple, low-cost, and effective.
+   -The buzzer was selected to provide sound alerts for wrong answers, low time warnings, and game over indications, making the product more interactive.
+   -Push buttons and connecting wires were used for start, reset, and circuit connections, while a cardboard or box enclosure was chosen to give the prototype a neat and compact structure.
 
 
 ## 11.3 Items You chose
 
 | Item                 | Why Needed               | Purchase Link | Latest Safe Date to Procure | Status       |
 | -------------------- | ------------------------ | ------------- | --------------------------- | ------------ |
-| `BO Motors + Wheels` | `Drive system for car`   | `robu.in`     | `15th April`                | `[Received]` |
-| `Buck Converter`     | `Stable power for ESP32` | `local store` | `before testing`            | `[Received]` |
-| `Li-ion Batteries`   | `Portable power`         | `local store` | `before testing`            | `Recieved`   |
+| Vicharak shrike | instruction   | `robu.in`     | `15th April`                | `[Received]` |
+| Arduino io shield    | Execution of program| `local store` | `before testing`            | `[Received]` |
+| LCD display| Displaying questions and output         | `local store` | `before testing`            | `Recieved`   |
 
 ## 11.4 Budget Summary
 
@@ -467,8 +472,15 @@ Explain why you selected your main materials and components.
 ## 11.5 Budget Reflection
 
 If your cost is too high, what can be simplified, removed, substituted, or shared?
-
-**Response:**  
+If the total project cost becomes too high, several lower-cost alternatives can be used without affecting the main concept of the product.
+The Vicharak Shrike Lite board can be replaced with a lower-cost Arduino Nano or Arduino Uno compatible board for basic control functions.
+The 16x2 LCD display can be replaced with a smaller display or a simple serial monitor output during testing.
+The 7-segment display can be removed, and the countdown timer can be shown directly on the LCD screen instead.
+The 4x4 matrix keypad can be replaced with a 4-button keypad or fewer push buttons for answer selection.
+Multiple LED indicators can be reduced to one common LED for status indication.
+The buzzer can be replaced with a basic piezo buzzer, which is lower in cost.
+Instead of a custom enclosure, a simple cardboard box or recycled material can be used for the outer structure.
+By using these alternatives, the project cost can be reduced while still maintaining the core experience of a mission-based educational game. 
 
 ---
 
@@ -477,16 +489,6 @@ If your cost is too high, what can be simplified, removed, substituted, or share
 ## 12.1 Team Working Agreement
 
 Write how your team will work together.
-
-Include:
-
-- how tasks are divided,
-- how decisions are made,
-- how progress will be checked,
-- what happens if a task is delayed,
-- how documentation will be maintained.
-
-**Response:**  
 
 
 ## 12.2 Task Breakdown
