@@ -127,8 +127,8 @@ List what inspired the project.
 ## 3.2 Original Twist
 
 What makes your project original?
+Our project is original because it converts normal math practice into an interactive hardware-based game with a timer, keypad input, and mission-based learning that makes problem solving more engaging and enjoyable.
 
-**Response:**  
 
 
 ---
@@ -137,8 +137,21 @@ What makes your project original?
 
 ## 4.1 User Journey 
 
-Describe exactly how a user will use the project.Make it a story
-**Response:**  
+Input:
+
+The system receives input from the user through a matrix keypad and control buttons. The user enters numerical answers for Mathematics questions and selects options for Science and General Knowledge questions. The start button is used to begin the game, and reset buttons can be used to restart the system if required.
+
+Processing:
+
+The Arduino microcontroller acts as the main controller of the product. It stores question sets for Mathematics, Science, and General Knowledge. When the game starts, the controller runs the countdown timer, displays questions one by one, checks the answers entered by the user, calculates the score, and decides whether the user has passed or failed the mission. It also controls warning signals when wrong answers are entered or when time is low.
+
+Output:
+
+The output is provided through an LCD display, LEDs, and a buzzer. The LCD screen shows welcome messages, instructions, questions, timer status, score, and final results. LEDs are used for status indications such as correct answers, warning signals, or low remaining time. The buzzer gives sound feedback for wrong answers, alerts, and final success or failure indications.
+
+Physical Structure:
+
+The product is built using an Arduino board connected to a matrix keypad, LCD display, LEDs, buzzer, push buttons, and power supply. All components are mounted on a breadboard or enclosed in a prototype box to make the system compact and user-friendly. The keypad is placed on the front side for easy access, while the display is positioned clearly for reading questions and timer values.
 
                                                   |
 
@@ -200,15 +213,7 @@ Check all that apply.
 
 Explain how the system works in simple terms.
 
-Include:
 
-- input,
-- processing,
-- output,
-- physical structure,
-- app interaction if any.
-
-**Response:**  
 
 ## 6.3 Input / Output Map
 
