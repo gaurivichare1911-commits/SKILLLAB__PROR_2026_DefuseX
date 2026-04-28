@@ -674,6 +674,8 @@ Suggested images:
 <img width="960" height="1280" alt="mkb3" src="images/MKB3.jpeg" />
 <img width="960" height="1280" alt="mkb4" src="images/MKB4.jpeg" />
 <img width="960" height="1280" alt="mkb5" src="images/MKB5.jpeg" />
+<img width="960" height="1280" alt="mkb6" src="images/MKB6.jpeg" />
+<img width="960" height="1280" alt="mkb7" src="images/MKB7.jpeg" />
 
 
 
