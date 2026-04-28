@@ -71,8 +71,8 @@ DefuseX
 ## 1.3 Project Title
 
 DefuseX- Bomb Defusal game
-<img width="1200" height="1031" alt="image" src="images/DEFUSE-X.png" />
-<img width="1200" height="1031" alt="image" src="images/TITLE.jpeg" />
+<img width="1000" height="900" alt="image" src="images/DEFUSE-X.png" />
+<img width="1000" height="900" alt="image" src="images/TITLE.jpeg" />
 
 ## 1.4 One-Line Pitch
 
