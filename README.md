@@ -72,7 +72,7 @@ DefuseX
 
 DefuseX- Bomb Defusal game
 
-<img width="1600" height="1131" alt="image" src="" />
+<img width="1600" height="1131" alt="image" src="images/TITLE.jpeg" />
 
 ## 1.4 One-Line Pitch
 
