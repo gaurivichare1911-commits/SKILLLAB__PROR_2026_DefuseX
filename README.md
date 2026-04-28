@@ -463,9 +463,8 @@ Explain why you selected your main materials and components.
 | Budget Item           | Estimated Cost              |
 | --------------------- | ---------------------------:|
 | Electronics           | `[400]`                     |
-| Mechanical parts      | `[200]`                     |
 | Fabrication materials | `[0 (Available on campus)]` |
-| Purchased extras      | `[0]`                       |
+| Purchased extras      | `[180]`                       |
 | Contingency           | `[300]`                     |
 | **Total**             | `[900]`                     |
 
@@ -493,25 +492,41 @@ Write how your team will work together.
 
 ## 12.2 Task Breakdown
 
-| Task ID | Task                    | Owner    | Estimated Hours | Deadline     | Dependency | Status |
-| ------- | ----------------------- | -------- | ---------------:| ------------ | ---------- | ------ |
-| T1      | `[Finalize concept]`    | `[Both]` | `2`             | `1st April`  | `None`     | `Done` |
-
+| Task ID | Task                                | Owner    | Estimated Hours | Phase time    | Dependency | Status |
+| ------- | -----------------------             | -------- | ---------------:| ------------  | ---------- | ------ |
+| T1      | Ideation & Concept Finalization`    | All      | `2`             |2 hrs           | `None`     | `Done` |
+| T2      |Core Implementation                  | Aditya   | `2`             |2 hrs           | T1         | `Done` |
+| T3     | Documentation (Report writing)`      | Gauri    | 4 hours (side by side) |4hrs |T1,T2            | `Done` |
+| T4     | PPT Preparation                     |Darsh ,pratham ,gauri | half hr     |half hr  | T1,T2,T3`| `Done` |
+| T5      | Hardware assembly    |Aditya     | `2`             |2 hrs           | T1,T2,T3,T4 | `Done` |
+| T6      |Testing and debugging             | Aditya   | `2`             |2 hrs           | T1 ,T2,T3,T4,T5       | `Done` |
 
 ## 12.3 Responsibility Split
 
 | Area                 | Main Owner | Support Owner |
 | -------------------- | ---------- | ------------- |
-| Concept              | `[Gopal]`  | `[Kader]`    |
-| Electronics          | `[]`       | `[]`     |
-| Coding               | `[]`       | `[]`     |
-| Mechanical build     | `[]`       | `[]`    |
-| Testing              | `[]`       | `[]`    |
-| Documentation        | `[]`       | `[]`     |
+| Concept              | `[Darsh]`  | `[Gauri,Aditya,pratham]`    |
+| Electronics          | `[Aditya]`       | `[darsh, pratham]`     |
+| Coding               | `[Aditya]`       | `[darsh]`     |
+| Testing              | `[Aditya]`       | `[gauri,pratham,darsh ]`    |
+| Documentation        | `[Gauri]`       | `[Gauri]`     |
 
 ---
 
 # 13. 2 hour Milestones
+In the first two hours, the following work was covered:
+Finalized the project idea and confirmed the concept of a mission-based quiz game using Math, Science, and GK questions.
+Discussed the required components and prepared the hardware setup.
+Connected the Vicharak Shrike Lite board with the breadboard and power supply.
+Completed wiring of the 4x4 matrix keypad for user input.
+Connected the 16x2 LCD display for showing questions and messages.
+Connected the 7-segment display for timer indication.
+Added LEDs and buzzer for alerts and status signals.
+Started coding the basic game logic including startup screen and timer.
+Tested keypad input and LCD output functionality.
+Corrected wiring and minor coding issues during initial testing.
+Achieved a basic working prototype where the system powers on and accepts user input.
+
 
 ## 13.1 8-hour Plan
 
@@ -534,7 +549,7 @@ Expected outcomes:
 - [x] Electronics tests completed
 - [ ] CAD / structure planning completed
 - [ ] App UI started if needed
-- [x] Mechanical concept tested
+- [] Mechanical concept tested
 - [x] Main subsystems partially working
 
 ### Bi Hour 3 — Integrate
