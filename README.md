@@ -170,13 +170,31 @@ The product is built using an Arduino board connected to a matrix keypad, LCD di
 
 What is the smallest version of this project that still delivers the core experience?
 
-**Response:**  
+The smallest version would keep only the essential parts needed for the main idea: solve, respond, complete the mission.
+
+Arduino board → to control the game logic
+4x4 Matrix Keypad → for entering answers
+16x2 LCD display → to show questions and timer
+Buzzer → for wrong answer and time-up alert
+
+No extra LEDs, no advanced casing, no wireless modules, and no additional sensors. Just a simple breadboard setup with the main components connected.
 
 
 ## 5.3 Stretch Features
 
 What features are nice to have but not essential?
+Difficulty levels → Easy, Medium, and Hard modes with different timer speed and question complexity.
+Score memory → save highest score using EEPROM memory.
+Sound effects module → ticking sound, success tone, or game over sound.
+Battery power supply → makes the device portable.
+Project enclosure/casing → gives a professional finished look.
+Bluetooth / Wi-Fi module → connect to mobile app for score tracking or control.
+Multiplayer mode → two players can compete one after another.
+Additional subjects → more Science, GK, or puzzle rounds.
+Voice guidance → spoken instructions or alerts.
+Reset and mode buttons → easier operation for selecting rounds.
 
+These features improve the product experience and appearance, but the project can still deliver its main gameplay without them.
 
 ---
 
@@ -192,11 +210,11 @@ Check all that apply.
 
 - [x] Sensor-based
 
-- [x] App-connected
+- [] App-connected
 
-- [x] Motorized
+- [] Motorized
 
-- [ ] Sound-based
+- [x] Sound-based
 
 - [x] Light-based
 
@@ -206,20 +224,36 @@ Check all that apply.
 
 - [x] Game logic based
 
-- [x] Installation
+- [] Installation
 
 - [ ] Other:
 
 ## 6.2 High-Level System Description
 
 Explain how the system works in simple terms.
+1)When the device is switched on, the Arduino starts the system and shows a welcome message on the display. The LEDs may blink to show that the game is ready.
+2)The user presses the start button or keypad key to begin the game. A countdown timer starts running on the 7-segment display.
+3)Questions from Mathematics, Science, or General Knowledge are shown on the LCD display one by one.
+4)The user enters answers using the matrix keypad. For math questions, numbers are typed directly. For Science and GK questions, the user selects the correct option using the keypad.
+5)The Arduino checks whether the answer is correct or wrong.
+6)If the answer is correct, the system moves to the next question and may turn on a green LED.
+7)If the answer is wrong, the buzzer sounds and a warning LED may glow.
+8)The user continues answering questions until the timer ends or all questions are completed.
+9)At the end, the display shows the final result such as mission success or mission failed, based on the score.
+10)Overall, the system combines learning and gaming by using a timer, keypad input, display output, LEDs, buzzer, and Arduino control.
+
+
 
 
 
 ## 6.3 Input / Output Map
 
-| System Part                              | Type            | What It Does                                                               |
-
+| System Part                              | Type             | What It Does                                    |
+|Vicharak Shrike                           | Processing       |Executes game logic                              |
+|Arduino io shield                         |INPUT AND OUTPUT  | executes operation                              |
+|LCD                                       |Output            | Displaying in                                   |
+|LED's                                     | OUTPUT           | Indication                                      |
+|Physical Structure                        | Structural       |Taking all components in neat way                |
 
 ---
 
@@ -258,9 +292,9 @@ Add a sketch with labels showing:
 
 | Dimension        | Value   |
 | ---------------- | ------- |
-| Length           | `16 cm` |
-| Width            | `16 cm` |
-| Height           | `8 cm`  |
+| Length           | `18 cm` |
+| Width            | `8 cm` |
+| Height           | `10 cm`  |
 | Estimated weight | `400 g` |
 
 ---
@@ -315,7 +349,7 @@ Insert a hand-drawn or software-made circuit diagram.
 
 | Tool / Platform                | Purpose                                        |
 | ------------------------------ | ---------------------------------------------- |
-| `[MicroPython]`                | `Control ESP32`                                |
+| `Arduino ide`                |     write and upload code for project                    |
 | `[Python/PyGame/OpenCV]`       | `Track markers, game logic, create projection` |
 | `[Fusion/Blender/Illustrator]` | `[Prototyping structure]`                      |
 |                                |                                                |
