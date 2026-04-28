@@ -252,7 +252,7 @@ Add a sketch with labels showing:
 
 **Insert image below:**  
 `[Upload image and link here]`
-<img width="1600" height="1200" alt="image" src="DEFUSE-X_DESIGN.jpeg" />
+<img width="1600" height="1200" alt="image" src="images/DEFUSE-X_DESIGN.jpeg" />
 
 ## 7.3 Approximate Dimensions
 
