@@ -72,7 +72,7 @@ DefuseX
 
 DefuseX- Bomb Defusal game
 
-<img width="1600" height="1131" alt="image" src="[https://github.com/user-attachments/assets/c64bfbd4-b3b7-43d9-83ad-c203a5aa11bc](https://github.com/gaurivichare1911-commits/SKILLLAB__PROR_2026_DefuseX/blob/main/images/TITLE.jpeg)" />
+<img width="1600" height="1131" alt="image" src="" />
 
 ## 1.4 One-Line Pitch
 
