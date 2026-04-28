@@ -67,7 +67,7 @@ https://youtu.be/lA20RRszkcM
 | -------------- | ------------------------------- | -------------- | -------------------------------- |
 | Gauri Vichare | Documentation | Documentation | Documentation, Gift of Gab |
 | Darsh Moundekar | Product Designing  | Hardware | Material Handling, Hardware  |
-| Aditya Sasane | Hradware | Coding | Material Handling , hardware|
+| Aditya Sasane | Hardware | Coding | Material Handling , hardware|
 | Pratham Talole | Research   |Documentation  | Material handling, Gift of Gab   |
 
 ## 1.3 Project Title
