@@ -58,6 +58,7 @@ By the final review, this README should clearly show:
 ## 1.1 Studio / Group Name
 
 DefuseX
+<img width="800" height="800" alt="image" src="images/MKB1" />
 
 ## 1.2 Team Members
 
@@ -601,7 +602,7 @@ Suggested images:
 - mechanism test,
 - app screenshot,
 - final build.
-- <img width="960" height="1280" alt="WhatsApp Image 2026-04-24 at 9 46 02 AM (1)" src="https://github.com/user-attachments/assets/74baa570-5770-483e-be6d-d2f03386e37c" />
+- <img width="960" height="1280" alt="WhatsApp Image 2026-04-24 at 9 46 02 AM (1)" src="image/MKB2" />
 
 
 
