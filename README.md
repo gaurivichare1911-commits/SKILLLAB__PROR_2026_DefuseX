@@ -64,15 +64,15 @@ DefuseX
 | Name           | Primary Role                    | Secondary Role | Strengths Brought to the Project |
 | -------------- | ------------------------------- | -------------- | -------------------------------- |
 | Gauri Vichare | Documentation | Documentation | Documentation, Gift of Gab |
-| Darsh Moundekar | Product Designing  | Coding | Material Handling, Hardware  |
-| Aditya Sasane | Hradware | Hardware| Material Handling , hardware|
-| Pratham Talole | Research   |Documentation  | Documentation, Gift of Gab   |
+| Darsh Moundekar | Product Designing  | Hardware | Material Handling, Hardware  |
+| Aditya Sasane | Hradware | Coding | Material Handling , hardware|
+| Pratham Talole | Research   |Documentation  | Material handling, Gift of Gab   |
 
 ## 1.3 Project Title
 
 DefuseX- Bomb Defusal game
-<img width="1000" height="900" alt="image" src="images/DEFUSE-X.png" />
-<img width="1000" height="900" alt="image" src="images/TITLE.jpeg" />
+<img width="800" height="800" alt="image" src="images/DEFUSE-X.png" />
+<img width="800" height="800" alt="image" src="images/TITLE.jpeg" />
 
 ## 1.4 One-Line Pitch
 
