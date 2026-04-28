@@ -57,18 +57,20 @@ By the final review, this README should clearly show:
 
 ## 1.1 Studio / Group Name
 
-`Project^2`
+DefuseX
 
 ## 1.2 Team Members
 
 | Name           | Primary Role                    | Secondary Role | Strengths Brought to the Project |
 | -------------- | ------------------------------- | -------------- | -------------------------------- |
-| `Gopalakrishnan` | `[Electronics / Coding / App ]` | `Documentation`  | `Documentation, Gift of Gab `|
-| `KAder Shaikh`  | `[Electronics / Fabrication]`   | `[Coding]`     | `Material Handling, Hardware`    |
+| Gauri Vichare | Documentation | Documentation | Documentation, Gift of Gab |
+| Darsh Moundekar | Product Designing  | Coding | Material Handling, Hardware  |
+| Aditya Sasane | Hradware | Hardware| Material Handling , hardware|
+| Pratham Talole | Research   |Documentation  | Documentation, Gift of Gab   |
 
 ## 1.3 Project Title
 
-`"Project Project"`
+DefuseX- Bomb Defusal game
 
 `(because Project-or)`
 
@@ -76,7 +78,7 @@ By the final review, this README should clearly show:
 
 ## 1.4 One-Line Pitch
 
-`A projected, fully customizable time portal where engineering education is done through PUBG battlefield in the comfort of our home`
+“A fast-paced quiz game where math, science, and general knowledge skills are tested under a ticking countdown.”
 
 ## 1.5 Expanded Project Idea
 
@@ -87,7 +89,9 @@ In 1–2 paragraphs, explain:
 - what technologies are involved.
 
 **Response:**  
-`A projected and fully customizable time portal can transform engineering education into an immersive PUBG-style battlefield experience from the comfort of home. In this environment, students can learn engineering concepts by entering a virtual battlefield where challenges, obstacles, and missions are designed around real technical problems. Instead of passively studying theory, learners actively apply concepts such as electronics, coding, sensors, robotics, mechanics, and system design to complete missions, solve problems, and progress through different levels. This approach makes engineering education more interactive, engaging, and practical by combining gaming, simulation, and hands-on problem-solving in a familiar and exciting format.`
+DefuseX– Interactive Quiz Defusal System is an Arduino-based interactive device that turns traditional quizzes into a fast-paced, game-like experience. It presents users with questions from Mathematics, Science, and General Knowledge (GK) on a display, where they must enter answers using a keypad within a limited time. A countdown timer creates urgency, while a buzzer and LED indicators provide real-time feedback for correct or incorrect responses. This transforms simple question-solving into an engaging challenge where users must think quickly and accurately to progress.
+
+The system creates a high-pressure, immersive learning environment that enhances knowledge, reaction speed, and decision-making skills. Built using an Arduino microcontroller programmed in Embedded C/C++, the project integrates hardware components such as a keypad, display, buzzer, and LEDs through real-time input-output control. By combining concepts of embedded systems, human-computer interaction, and game logic, the project delivers an effective example of edutainment, making learning interactive, dynamic, and enjoyable.
 
 ---
 
@@ -118,7 +122,7 @@ List what inspired the project.
 
 | Source Type | Title / Link                                                        | What Inspired You                                                                         |
 | ----------- | ------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| `[Video]`   | `https://www.instagram.com/reel/DW4CT7WCDry/?igsh=cXg3dzAxYmdncDBo` | `How projection mapping can be used to create interactive digital + physical experiences` |
+| AI CHATGPT  | https://chatgpt.com/share/69f03b77-c5d8-83e8-88b4-737d4e09ca13     | `How projection mapping can be used to create interactive digital + physical experiences` |
 |             |                                                                     |                                                                                           |
 |             |                                                                     |                                                                                           |
 
@@ -263,13 +267,12 @@ Add a sketch with labels showing:
 
 | Component                 | Quantity | Purpose                               |
 | ------------------------- | --------:| ------------------------------------- |
-| `[ESP32]`                 | `1`      | `[Main controller]`                   |
-| `[L298N Motor Driver]`    | `1`      | `[Control Motors]`                    |
-| `[BO Motors]`             | `2`      | `[Rotate wheels]`                     |
-| `[Buck Converter]`        | `1`      | `[Power ESP32]`                       |
-| `[Li Ion Battery Pack]`   | `2`      | `[Power]`                             |
-| `[Projector]`             | `1`      | `[Display obstacles]`                 |
-| `Camera (Webcam / Phone)` | `1`      | `[Tracks car position using markers]` |
+| Vicharak Shrike Lite      | `1`      | `[Main controller]`                   |
+| 4x4 Matrix Keypad         | `1`      | `[For numbers]`                       |
+| Buzzer                    | `2`      | `[Bomb sound]`                        |
+| 16x2 I2C LCD              | `1`      | `[Display]`                           |
+| Arduino IO shield         |  `1`     | `[For buttons]`                       |
+| Led                       | `3`      | `[Indicators]`                        |
 
 ## 8.2 Wiring Plan
 
