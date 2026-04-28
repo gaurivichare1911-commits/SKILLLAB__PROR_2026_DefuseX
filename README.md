@@ -679,7 +679,9 @@ What did your team do well?
 What slowed you down?  
 How well did you manage time, tasks, and responsibilities?
 
-**Response:**  
+Our team worked together effectively, which made the project easier to complete. Each member contributed in different areas such as documentation, coding, hardware setup, research, and helping one another whenever needed. Good communication and clear understanding among team members helped everyone know what task they were doing, which improved coordination and reduced confusion.
+The main factors that slowed down our project were issues with the LCD screen and the 4x4 matrix keypad during setup and testing. Although solutions were found and the problems were resolved, these components required extra time for troubleshooting and proper integration with the system.
+At the beginning of the project, each team member shared ideas and suggested improvements. After discussion and mutual understanding, the final project idea was selected. Responsibilities were divided according to individual interests and skills. One member focused on documentation, another handled coding and hardware, one worked on research, and another managed hardware connections. Even though tasks were divided, all members supported each other throughout the process. Proper task distribution and taking responsibility for assigned work helped us manage time well and complete the project successfully.
 
 
 ## 18.2 Technical Reflection
