@@ -574,12 +574,12 @@ Expected outcomes:
 
 ## 13.2  Update Log
 
-| Week   | Planned Goal   | What Actually Happened | What Changed   | Next Steps     |
+| HOUR   | Planned Goal   | What Actually Happened | What Changed   | Next Steps     |
 | ------ | -------------- | ---------------------- | -------------- | -------------- |
-| Week 1 | `[Write here]` | `[Write here]`         | `[Write here]` | `[Write here]` |
-| Week 2 | `[Write here]` | `[Write here]`         | `[Write here]` | `[Write here]` |
-| Week 3 | `[Write here]` | `[Write here]`         | `[Write here]` | `[Write here]` |
-| Week 4 | `[Write here]` | `[Write here]`         | `[Write here]` | `[Write here]` |
+| HOUR 1 | `[Write here]` | `[Write here]`         | `[Write here]` | `[Write here]` |
+| HOUR2 | `[Write here]` | `[Write here]`         | `[Write here]` | `[Write here]` |
+| HOUR 3 | `[Write here]` | `[Write here]`         | `[Write here]` | `[Write here]` |
+| HOUR 4 | `[Write here]` | `[Write here]`         | `[Write here]` | `[Write here]` |
 
 ---
 
@@ -587,14 +587,15 @@ Expected outcomes:
 
 ## 14.1 Risk Register
 
-| Risk                                                            | Type         | Likelihood | Impact   | Mitigation Plan                                                                       | Owner                |
+| Risk                                                            | Type         | Likelihood | Impact   | Mitigation Plan                                                                        |
 | --------------------------------------------------------------- | ------------ | ---------- | -------- | ------------------------------------------------------------------------------------- | -------------------- |
-| WiFi connection between laptop and ESP32 becomes unstable       | `Technical`  | `Medium`   | `High`   | Keep ESP32 close, ensure stable power supply, reduce network load, add fail-safe stop | `[Gopal]`           |
-
+| LCD display didnt supported                                     | `Technical`  | `Medium`   | High  |  improve wiring stability,correction has done in the code|
+|4X4 matrix keypad did'nt supported                               | `Technical`  | `Medium`   | High  |  improve wiring stability,correction has done in the code,libraries has been installed|
 
 ## 14.2 Biggest Unknown Right Now
 
-What is the single biggest uncertainty in your project at this stage?
+What is the single biggest uncertainty in your project at this stage? 
+
 
 **Response:**  
 
@@ -607,22 +608,25 @@ What is the single biggest uncertainty in your project at this stage?
 
 | What Needs Testing     | How You Will Test It                                                                 | Success Condition                                                                                    |
 | ---------------------- | ------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------- |
-| `[Wifi connection]`    | `[Check if motor spins via app button]`                                              | `[Both motors accurately respond to wifi signals]`                                                   |
+| Code | checking if there is no any error| code succesfully tested and is without error    
+| LCD screen | by correcting the connections and the proper code| code corrected succefully and connections too  |
+| 4X4 matrix keypad| checking the connections | connections checked properly
                        |
 ## 15.2 Testing and Debugging Log
 
 | Date          | Problem Found                         | Type         | What You Tried                                | Result               | Next Action                                    |
 | ------------- | ------------------------------------- | ------------ | --------------------------------------------- | -------------------- | ---------------------------------------------- |
-| `18th April`  | `Car not balancing properly`          | `Mechanical` | `Add low-friction caster support to one side` | `Worked`             | `improve caster structure`                     |
-
+| 28 april | LCD not working     | `Mechanical` | reducing error ,downloding proper libraries | `Worked`             | improved code and connection                    |
+| 28 april | 4x4 keypad not working     | `Mechanical` |making proper connections and correctiing code | `Worked`             | improved code and connection                    |
 
 ## 15.3 Playtesting Notes
 
 | Tester      | What They Did                        | What Confused Them                    | What They Enjoyed                         | What You Will Change                          |
 | ----------- | ------------------------------------ | ------------------------------------- | ----------------------------------------- | --------------------------------------------- |
-| `Gopal` | `Tried navigating through obstacles` | `Some obstacles ewren't clear enough` | `Liked projection + real car interaction` | `Add a slight red highlight around obstacles` |
-
-
+| Aditya | corrected the error | code and connection| correcting the connections and code| nothing |
+|Gauri| corrected the documentation |Using git |Understanding git| nothing |
+| Pratham| researched on prototype|nothing| Researching| nothing |
+|Darsh| Researched and hardware  | code and connection| researching and connection| nothing |
 ---
 
 # 16. Build Documentation
@@ -642,22 +646,21 @@ Include:
 - revisions.
 
 **Response:**  
-`The fabrication process involved designing, manufacturing, assembling, and refining both the physical structure and electronic integration of the system.`
-
-`Design (CAD Modeling):
-The initial model was created using CAD software, where components were designed based on the actual dimensions of the electronic parts. This ensured accurate fitting and minimized errors during assembly.
-Cutting (Laser Cutting):
-The designed parts were fabricated using laser cutting techniques. Sheets were cut precisely according to the CAD model to create the structural base and mounts for components.`
-
-`Components were fixed using adhesives and mechanical supports. Certain parts were intentionally kept modular (not permanently fixed) to allow easy replacement and modification of electronics.
-Surface Finishing:
-Some parts were sanded to smooth rough edges after cutting. Sawdust mixed with adhesive was used to fill gaps and uneven edges, improving structural finish. The final structure was then painted for better aesthetics and durability.`
-
-`Environment Setup (Dark Room Fabrication):
-To enhance projection visibility, a controlled dark environment was created using Z-boards, paper sheets, and bedsheets. This minimized external light interference and improved projection clarity.
-Revisions and Iterations:
-Multiple adjustments were made throughout the process, including refining alignment, improving structural stability, repositioning components, and optimizing the interaction between the physical car and projected environment.`
-
+The fabrication process involved planning, assembling, wiring, and refining both the physical structure and electronic setup of the project.
+Design and Layout:
+The initial layout of the project was planned by arranging the Shrike Lite board, keypad, LCD display, 7-segment display, LEDs, and buzzer in suitable positions. Proper spacing was considered so that the user could easily view the displays and operate the keypad.
+Cutting:
+Cardboard or mounting sheet material was measured and cut according to the required dimensions to create the base platform and outer enclosure for the prototype. Openings were made for the LCD display, keypad, and LEDs.
+Assembly:
+All components were placed on the base structure and aligned properly. The controller board, display modules, keypad, and other parts were arranged in a user-friendly manner for smooth operation.
+Fastening:
+Components were fixed using glue, double-sided tape, screws, or cable ties depending on availability. This ensured that the parts remained stable during use and testing.
+Wiring:
+Electrical connections were completed using jumper wires between the Shrike Lite board and all modules such as keypad, LCD display, 7-segment display, LEDs, and buzzer. Power and ground connections were checked carefully before testing.
+Finishing:
+Loose wires were arranged neatly, unnecessary gaps were covered, and the enclosure was cleaned for a better final appearance. Labels or markings were added where necessary for buttons and controls.
+Revisions and Improvements:
+Several changes were made during fabrication, including correcting wiring issues, adjusting component positions, improving display visibility, and modifying the enclosure for easier access. Repeated testing helped improve the final structure and working condition of the project.
 ## 16.2 Build Photos
 
 Add photos throughout the project.
@@ -688,21 +691,37 @@ Suggested images:
 
 Describe the final version of your project.
 
-**Response:**  
+The final version of our project is a mission-based educational quiz game using the Vicharak Shrike Lite board. It includes a 4x4 matrix keypad for user input, 16x2 LCD display for questions, 7-segment display for timer, LEDs for indicators, and a buzzer for alerts.
+The user answers Math, Science, and GK questions within limited time. Correct answers increase the score, while wrong answers give warning signals. At the end, the system displays Mission Success or Mission Failed.
+The project combines learning, gaming, and hardware interaction in a compact prototype. 
 
 
 ## 17.2 What Works Well
+The core game concept works well and is engaging, as it combines learning, quick thinking, and interaction in one system. The Shrike Lite board successfully handles input, timer logic, question processing, and output control as a complete embedded system. The 4x4 matrix keypad provides a simple and effective way for users to enter answers and select options.
 
+The LCD display clearly shows questions, instructions, and results, while the 7-segment display gives an easy-to-read countdown timer. LEDs and buzzer provide clear visual and sound feedback for correct answers, warnings, and game status.
+
+The project demonstrates strong integration of hardware and software, where all components work together smoothly to create a complete interactive educational product.
 
 
 ## 17.3 What Still Needs Improvement
 
+Some areas of the project can still be improved for better performance and user experience. The response speed of the keypad can be made faster and more accurate during quick input. The LCD display interface can be improved with better formatting and smoother question transitions.
 
+The wiring setup can be made more compact and organized by using a proper PCB or cleaner enclosure instead of breadboard connections. Sound effects and LED indications can be enhanced to make the game more interactive and attractive.
+
+Additional features such as multiple difficulty levels, score memory, more question categories, and multiplayer mode can be added in future versions. A stronger outer casing and battery power option would also make the product more portable and professional.
 ## 17.4 What Changed From the Original Plan
 
 How did the project change from the initial idea?
 
-**Response:**  
+The project evolved during the planning and development stages. The initial idea was focused only on a simple math-based quiz system. Later, the concept was improved into a mission-based educational game that includes Mathematics, Science, and General Knowledge questions to make the product more interactive and useful.
+
+The hardware setup also changed during development. Additional components such as the 7-segment display, LEDs, and buzzer were added to improve timer visibility, alerts, and user experience. The keypad remained the main input device, while the LCD display was used for better question presentation.
+
+The gameplay logic was also upgraded from a basic question-answer system to a timed challenge format with score checking, warning signals, and final success or failure results.
+
+Overall, the project changed from a simple quiz idea into a more complete and engaging educational game with improved hardware integration and clearer gameplay features.
 
 
 ---
@@ -733,7 +752,17 @@ What did you learn about:
 - fabrication,
 - integration?
 
-**Response:**  
+Through this project, we learned important practical skills in different technical areas.
+
+In electronics, we learned how to connect and interface components such as the Shrike Lite board, keypad, LCD display, 7-segment display, LEDs, and buzzer. We also understood the importance of proper wiring, power supply connections, resistors, and troubleshooting hardware issues.
+
+In coding, we learned how to write and organize embedded system programs for handling keypad input, displaying questions, controlling timers, checking answers, and managing outputs such as LEDs and buzzer. We also improved our debugging skills while solving errors during testing.
+
+In mechanisms, we learned how different input and output devices work together as one system. We understood how user actions through the keypad are processed and converted into visual or sound responses.
+
+In fabrication, we learned how to physically arrange components, prepare the enclosure, mount modules properly, and keep the setup neat and user-friendly. We also learned the importance of planning component placement before final assembly.
+
+In integration, we learned how to combine hardware, software, and physical structure into one complete working product. This helped us understand real-world system design where multiple modules must work together smoothly. 
 
 
 ## 18.3 Design Reflection
@@ -747,7 +776,17 @@ What did you learn about:
 - understanding,
 - iteration?
 
-**Response:**  
+In designing, we learned how to plan a product by arranging components in a simple, organized, and user-friendly layout. We understood that good design is not only about appearance but also about functionality and ease of use.
+
+In delight, we learned that adding elements such as timer challenges, LEDs, buzzer sounds, and mission-based gameplay makes the product more enjoyable and exciting for users. Small interactive features can greatly improve the overall experience.
+
+In clarity, we learned the importance of clear instructions, readable display messages, and simple controls so that users can understand how to play without confusion. A clear interface improves usability.
+
+In physical interaction, we learned how users connect with the product through the keypad, buttons, and displays. Good placement of controls and displays makes interaction smoother and more comfortable.
+
+In understanding, we learned that designing for users requires thinking from their point of view. The product should be easy to understand, responsive, and engaging for first-time users.
+
+In iteration, we learned that the first version is rarely perfect. Repeated testing, improvements, and changes in wiring, coding, and layout helped us create a better final product.
 
 
 ## 18.4 If You Had One More hour
@@ -755,7 +794,11 @@ What did you learn about:
 What would you improve next?
 
 **Response:**  
+If we had one more hour, we would focus on improving the overall finish and adding extra features to the project. We would make the wiring cleaner and more organized for a better professional look. The outer enclosure would be improved to make the prototype stronger and more attractive.
 
+We would also add more questions for Mathematics, Science, and General Knowledge to increase gameplay variety. The LCD display messages and timer interface could be improved for better clarity. Sound effects and LED indications could be enhanced to make the game more interactive.
+
+Additional features such as difficulty levels, score memory, and smoother reset functions could also be added. Extra testing time would help us remove minor errors and improve the final user experience.
 ` `
 
 ---
