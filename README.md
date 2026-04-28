@@ -71,9 +71,9 @@ DefuseX
 ## 1.3 Project Title
 
 DefuseX- Bomb Defusal game
-
-<img width="1600" height="1131" alt="image" src="images/TITLE.jpeg" />
 <img width="1600" height="1131" alt="image" src="images/DEFUSE-X.png" />
+<img width="1600" height="1131" alt="image" src="images/TITLE.jpeg" />
+
 ## 1.4 One-Line Pitch
 
 “A fast-paced quiz game where math, science, and general knowledge skills are tested under a ticking countdown.”
