@@ -262,17 +262,6 @@ Explain how the system works in simple terms.
 
 ## 7.1 Concept Sketch
 
-Add an early sketch of the full idea.
-
-**Insert image below:**  
-`[Upload image and link here]`
-
-Example:
-
-```md
-
-```
-
 
 
 ## 7.2 Labeled Build Sketch
@@ -488,7 +477,10 @@ By using these alternatives, the project cost can be reduced while still maintai
 
 ## 12.1 Team Working Agreement
 
-Write how your team will work together.
+Our team agreed to work together with cooperation, respect, and clear communication throughout the project. Each member will share ideas openly and participate in decision-making. Responsibilities will be divided according to individual skills and interests such as coding, hardware setup, research, documentation, and presentation.
+We agreed to support each other whenever any member faces difficulties and to solve problems as a team. Regular discussions will be held to review progress, plan next tasks, and make improvements where needed.
+All members will complete assigned work on time and inform the team about any delays. Important decisions will be taken through mutual understanding so that everyone remains involved.
+Our main goal is to maintain teamwork, manage time properly, and complete the project successfully with equal contribution from every member.
 
 
 ## 12.2 Task Breakdown
@@ -577,12 +569,13 @@ Expected outcomes:
 
 | HOUR   | Planned Goal   | What Actually Happened | What Changed   | Next Steps     |
 | ------ | -------------- | ---------------------- | -------------- | -------------- |
-| HOUR 1 | `[Write here]` | `[Write here]`         | `[Write here]` | `[Write here]` |
-| HOUR2 | `[Write here]` | `[Write here]`         | `[Write here]` | `[Write here]` |
-| HOUR 3 | `[Write here]` | `[Write here]`         | `[Write here]` | `[Write here]` |
-| HOUR 4 | `[Write here]` | `[Write here]`         | `[Write here]` | `[Write here]` |
-
----
+| HOUR 1 | Finalize project idea and divide tasks among team members` | Discussed ideas, selected mission-based quiz game concept, and assigned responsibilities`         |Added Science and GK questions along with Math for better gameplay | Start hardware setup and collect components` |
+| HOUR2 | Complete hardware connections and basic testing | Connected Shrike Lite board, keypad, LCD, LEDs, buzzer, and timer display  | Some wiring issues occurred and were corrected during setup| Begin coding and test individual components |
+| HOUR 3-4 |Develop game logic and integrate all modules | Programmed question display, keypad input, timer, scoring, and alerts       |Improved interface by adding warning signals and better display flow| Perform full testing and debugging |
+| HOUR 5-6 |Final testing and prototype finishing | Tested complete system, corrected minor errors, arranged wiring, and improved structure  |Better appearance and smoother operation after revisions|Prepare report and presentation|
+| HOUR 7 |Documentation and report preparation |Completed project report, diagrams, budget, and reflection sections |Added extra details and improved formatting|Recheck final project files|
+| HOUR 8 |Final demonstration and submission readiness|Performed final working demo, checked components, and prepared for presentation |Minor last-minute corrections were completed|Ready for final evaluation and submission|
+-
 
 # 14. Risks and Unknowns
 
@@ -617,8 +610,8 @@ What is the single biggest uncertainty in your project at this stage?
 
 | Date          | Problem Found                         | Type         | What You Tried                                | Result               | Next Action                                    |
 | ------------- | ------------------------------------- | ------------ | --------------------------------------------- | -------------------- | ---------------------------------------------- |
-| 28 april | LCD not working     | `Mechanical` | reducing error ,downloding proper libraries | `Worked`             | improved code and connection                    |
-| 28 april | 4x4 keypad not working     | `Mechanical` |making proper connections and correctiing code | `Worked`             | improved code and connection                    |
+| 28 april | LCD not working     | Electronic | reducing error ,downloding proper libraries | `Worked`             | improved code and connection                    |
+| 28 april | 4x4 keypad not working     | Electronic |making proper connections and correctiing code | `Worked`             | improved code and connection                    |
 
 ## 15.3 Playtesting Notes
 
